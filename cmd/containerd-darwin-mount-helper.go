@@ -49,6 +49,10 @@ func main() {
 		},
 	}
 	cmd.Flags().StringVarP(&fstype, "type", "t", "", "mount type")
+	if err := cmd.MarkFlagRequired("type"); err != nil {
+		fmt.Printf("%s", err)
+		os.Exit(1)
+	}
 	cmd.Flags().StringArrayVarP(&options, "option", "o", nil, "mount options")
 
 	if err := cmd.Execute(); err != nil {

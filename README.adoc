@@ -1,0 +1,21 @@
+= containerd-darwin-mount-helper
+
+This is a reference implementation of macOS mount helper for https://containerd.io[containerd].
+
+See https://github.com/containerd/containerd/pull/8789
+
+== Dependencies
+
+* https://osxfuse.github.io[macFUSE] or https://www.fuse-t.org[fuse-t]
+* https://bindfs.org[bindfs] (see https://github.com/mpartel/bindfs/issues/100#issuecomment-870699085[build instructions])
+
+== Usage
+
+Just put `containerd-darwin-mount-helper` on PATH (for example, into `/usr/local/bin`)
+
+== Building from source
+
+[source,shell]
+----
+go build -o bin/ ./cmd/*.go
+----
