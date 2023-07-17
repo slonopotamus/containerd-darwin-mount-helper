@@ -11,7 +11,7 @@ See https://github.com/containerd/containerd/pull/8789
 
 == Usage
 
-Just put `containerd-darwin-mount-helper` on PATH (for example, into `/usr/local/bin`)
+Just put `containerd-darwin-mount-helper` (**use exactly this name!**) on PATH (for example, into `/usr/local/bin`)
 
 == Building from source
 
